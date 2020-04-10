@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Langbry.Test
 {
@@ -36,8 +36,6 @@ namespace Langbry.Test
             Assert.AreEqual(3, table.LanguageDictionary.Count);
         }
     }
-
-    
 
     public class Dic
     {

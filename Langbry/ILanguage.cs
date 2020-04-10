@@ -1,15 +1,9 @@
-﻿using Langbry.Config;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Langbry
+﻿namespace Langbry
 {
-	interface ILanguage
-	{
-		string GetLanguageCodeCookieName();
-		string GetLanguageCode(string value);
-	}
+    internal interface ILanguage
+    {
+        string GetLanguageCodeCookieName();
+
+        string GetLanguageCode(string value);
+    }
 }

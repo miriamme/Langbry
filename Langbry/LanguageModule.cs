@@ -35,7 +35,12 @@ namespace Langbry
                     if (ci == null)
                         this._languageType = LanguageType.EN;
                     else
-                        this._languageType = (LanguageType)Enum.Parse(typeof(LanguageType), ci.TwoLetterISOLanguageName.ToUpper());
+                    {
+                        if (Enum.TryParse(ci.TwoLetterISOLanguageName.ToUpper(), out LanguageType convertedLanguageType))
+                            this._languageType = convertedLanguageType;
+                        else
+                            this._languageType = LanguageType.EN;
+                    }
                 }
 
                 app.Context.Session[this._section.SessionLanguageType.Value] = this._languageType;
